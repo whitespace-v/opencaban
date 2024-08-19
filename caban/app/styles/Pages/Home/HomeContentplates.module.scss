@@ -1,0 +1,26 @@
+@import '../../variables';
+.HomeContentplates{
+    margin-top: $gaphuge*2;
+    &__title{
+        text-align: center;
+
+    }
+    &__plates{
+        margin-top: $gaphuge;
+        display: flex;
+        gap: $gapreg;
+        &-plate{
+            border: 1px solid $grayb;
+            border-radius: $brreg;
+            width: 600px;
+            padding: $gapreg;
+            &-canvas{    
+                width: 100px;
+                height: 100px;
+            }
+            &-title{
+                margin: 1cap 0;
+            }
+        }
+    }
+}

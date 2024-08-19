@@ -1,0 +1,10 @@
+@import '../../variables';
+.Container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1200) {
+    .Layout{
+      width: calc(320px + (1200 - 300) * ((100vw - 320px) / (1200 - 320)));;
+    }
+  }

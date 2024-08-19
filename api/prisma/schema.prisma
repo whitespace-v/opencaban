@@ -1,0 +1,122 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// alter user @user createdb;
+// bunx prisma init --datasource-provider
+// bunx prisma migrate dev --name init
+// bunx prisma generate
+// bun seed
+model Car {
+    id        Int      @id @default(autoincrement())
+    body_code String   @unique
+    vin_code  String   @unique
+    data      CarData?
+    ninja     Ninja?
+    encar     Encar?
+}
+
+model CarData {
+    id     Int    @id @default(autoincrement())
+    car    Car?   @relation(fields: [car_id], references: [id])
+    car_id Int    @unique
+    color  EColor
+    body   String
+    brand  String
+    model  String
+    year   String
+}
+
+// ninja
+model Ninja {
+    id        Int              @id @default(autoincrement())
+    car       Car              @relation(fields: [car_id], references: [id])
+    car_id    Int              @unique
+    uuid      String           @unique
+    equipment NinjaEquipment[]
+    details   NinjaDetails?
+    data      NinjaData?
+}
+
+model NinjaData {
+    id            Int      @id @default(autoincrement())
+    ninja         Ninja    @relation(fields: [ninja_id], references: [id])
+    ninja_id      Int      @unique
+    special_marks String
+    bid_info      String
+    price         String
+    score         String
+    place         String
+    name          String
+    year          String
+    images        String[]
+    auclist       String[]
+    car_kind_type String
+    kaijo_code    String
+    auction_count String
+    bid_no        String
+    zaiko_no      String
+    list_number   String
+    brand         String
+}
+
+model NinjaDetails {
+    id           Int    @id @default(autoincrement())
+    ninja        Ninja  @relation(fields: [ninja_id], references: [id])
+    ninja_id     Int    @unique
+    type         String
+    mileage      String
+    color        String
+    body         String
+    ac           String
+    displacement String
+    transmission String
+    steering     String
+    jsi          String
+}
+
+model NinjaEquipment {
+    id       Int     @id @default(autoincrement())
+    ninja    Ninja   @relation(fields: [ninja_id], references: [id])
+    ninja_id Int
+    text     String
+    status   Boolean
+}
+
+// end
+
+//encar
+model Encar {
+    id     Int    @id @default(autoincrement())
+    car    Car    @relation(fields: [car_id], references: [id])
+    car_id Int    @unique
+    alias  String
+}
+
+//end
+
+// sorts
+
+enum EColor {
+    yellow
+    orange
+    green
+    gray
+    gold
+    silver
+    purple
+    brown
+    black
+    blue
+    beige
+    white
+    red
+    pearl
+    pink
+    wine
+}

@@ -1,0 +1,44 @@
+@import '../../variables';
+.Button{
+   width: fit-content;
+   padding: $gapmed $gapreg;
+   border-radius: $brreg;
+   cursor: pointer;
+   display: flex;
+   gap: $gapreg;
+   align-items: center;
+   justify-content: center;
+   svg{
+     transition: all 50ms linear;
+   }
+   
+}
+.white{
+    border: 1px solid transparent;
+    color: $blackl;
+    background: $white;
+}
+.gray{
+    color: $white;
+    background: $blackl;
+    border: 1px solid $grayb;
+}
+.round{
+    border-radius: $brbig;
+}
+.text{
+    padding: $gapsmol $gapmed;
+    gap: $gapsmol;
+    color: $grayl;
+    border: 1px solid transparent;
+    background: transparent;
+}
+.text:hover{
+    color: $white;
+    svg{
+        rotate: 180deg;
+    }
+}
+.text_bordless:hover{
+    color: $white;
+}

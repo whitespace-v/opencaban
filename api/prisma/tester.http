@@ -1,0 +1,2 @@
+### Get all cars
+GET http://localhost:5500/cars

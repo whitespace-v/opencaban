@@ -1,0 +1,11 @@
+@import '../../variables';
+.FloatSearch{
+    position: absolute;
+    top: $gaphuge + $gapreg;
+    display: none;
+}
+.FloatSearch.open{
+    display: block;
+    border: 1px solid $grayb;
+    padding: $gapreg;
+}

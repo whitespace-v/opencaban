@@ -1,0 +1,29 @@
+@import '../../variables';
+.HomeIntro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gaphuge;
+    margin-top: $gaphuge;
+    &__news{
+        // display: flex;
+        // align-items: center;
+        gap: $gapreg;
+     }
+
+    &__greetings{
+        text-align: center; 
+        line-height: 3cap;
+    }
+    &__interaction{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $gapreg;
+        &_sight{
+            display: flex;
+            gap: $gapreg;
+        }
+    }
+}

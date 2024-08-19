@@ -1,0 +1,34 @@
+@import "variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+  // overflow: hidden;
+  background-color: $black !important;
+  position: relative;
+}
+html{
+  scroll-behavior: smooth;
+  *::selection{
+    background-color: $cyan;
+    color: $black;
+  }
+  font-weight: 3;
+}
+body::-webkit-scrollbar {
+}
+
+body::-webkit-scrollbar-track {
+
+}
+
+body::-webkit-scrollbar-thumb {
+
+}
+

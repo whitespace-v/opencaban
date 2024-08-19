@@ -1,0 +1,43 @@
+@import '../../variables';
+.Text{
+    color: $grayl;
+    display: inline;
+    font-size: $fzregd;
+}
+.cyan{
+    color: $cyan;
+}
+.white{
+    color: $white;
+}
+.gradient{
+    background: -webkit-linear-gradient($white, $grayb );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient::selection{
+    -webkit-text-fill-color: $black;
+    // background: #ef233c;
+
+}
+.fzhuge{
+    font-size: $fzhuged;
+}
+.fzbig{
+    font-size: $fzbigd;
+}
+.fwbig{
+    font-weight: 800;
+}
+.fzbig{
+    font-size: $fzbigd;
+}
+.fzmed{
+    font-size: $fzmedd;
+}
+.fzsmol{
+    font-size: $fzsmold;
+}
+.mono{
+    font-family: 'Courier New', Courier, monospace;
+}

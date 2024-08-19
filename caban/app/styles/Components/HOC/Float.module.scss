@@ -1,0 +1,23 @@
+@import '../../variables';
+.Float{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: $gapreg $gapreg*6;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, 0.8);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid $grayb;
+    & > * {
+        display: flex;
+        align-items: center;
+        gap: $gapreg;
+    }
+    &__interaction{
+        &_search{
+            position: relative;
+        }
+    }
+}
